@@ -32,12 +32,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin', # admin 사이트
+    'django.contrib.auth',  # 인증 시스템
+    'django.contrib.contenttypes',  # 컨텐츠 타입을 위한 framework
+    'django.contrib.sessions',  # 세션 framework (jwt를 쓴다면 이걸 빼면 되나??)
+    'django.contrib.messages',  # message framework (아직 모르겠따.)
+    'django.contrib.staticfiles',   # 정적파일 관리 framework
 ]
 
 MIDDLEWARE = [
