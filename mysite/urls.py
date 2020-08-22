@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include,path
 
 urlpatterns = [
+    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
+
+# path ( route, view)
+# 요청이 들어오면 urlpatterns를 순서대로 비교하면서 일치하는 패턴을 찾는다.
+# 패턴들은 GET, POST의 매개변수나 도메인 이름을 검색하지 않는다.
+# 예를들면 https://www.example.com/myapp/ 이 요청된 경우,
+# URLconf 는 오직 myapp/ 부분만 확인함.
+# https://www.example.com/myapp/?page=3, 같은 요청에도,
+# URLconf 는 역시 myapp/ 부분만 확인함.
+
